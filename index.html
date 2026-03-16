@@ -1,217 +1,121 @@
 <!DOCTYPE html>
-<html lang="vi">
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Nguyen Anh Portfolio</title>
 
 <style>
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-font-family:'Segoe UI',sans-serif;
-}
-
 body{
-
-background:#ffeae3;
-color:#323b4c;
-display:flex;
-flex-direction:column;
-align-items:center;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fdfdfd;
+    color:#323b4c;
 }
 
-nav{
+/* HEADER */
 
-width:100%;
-background:#323b4c;
-padding:15px;
-display:flex;
-justify-content:center;
-gap:30px;
-position:sticky;
-top:0;
-z-index:1000;
-
+header{
+    background:#f2a88d;
+    padding:60px 20px;
+    text-align:center;
 }
 
-nav a{
-
-color:#fdfdfd;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-
+header img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #fdfdfd;
 }
 
-nav a:hover{
-
-color:#f2a88d;
-
+header h1{
+    margin:15px 0 5px;
+    font-size:36px;
+    letter-spacing:1px;
 }
 
-.header{
-
-width:100%;
-height:260px;
-background:#f2a88d;
-display:flex;
-justify-content:center;
-align-items:flex-end;
-padding-bottom:40px;
-
+header p{
+    margin:4px 0;
 }
 
-.avatar{
+/* SECTION */
 
-width:170px;
-height:170px;
-border-radius:50%;
-border:6px solid #fdfdfd;
-overflow:hidden;
-
+section{
+    max-width:900px;
+    margin:auto;
+    padding:50px 20px;
 }
 
-.avatar img{
+/* ABOUT */
 
-width:100%;
-height:100%;
-object-fit:cover;
-
+.about{
+    background:#ffeae3;
+    border-radius:10px;
 }
 
-.container{
+/* SKILLS */
 
-max-width:950px;
-width:92%;
-background:#fdfdfd;
-margin-top:-40px;
-padding:40px;
-border-radius:25px;
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
-
+.skills ul{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:0;
 }
 
-.title{
-
-text-align:center;
-font-size:2.2em;
-margin-bottom:10px;
-
+.skills li{
+    list-style:none;
+    background:#f2a88d;
+    padding:8px 14px;
+    border-radius:20px;
+    color:white;
+    font-size:14px;
 }
 
-.subtitle{
+/* PROJECT */
 
-text-align:center;
-color:#f2a88d;
-font-weight:bold;
-margin-bottom:30px;
-
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.section{
-
-display:flex;
-gap:30px;
-margin:40px 0;
-align-items:center;
-flex-wrap:wrap;
-
-opacity:0;
-transform:translateY(40px);
-transition:0.8s;
-
+.project-card{
+    background:#ffeae3;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
 }
 
-.section.show{
-
-opacity:1;
-transform:translateY(0);
-
+.project-card:hover{
+    transform:translateY(-5px);
 }
 
-.section.reverse{
-
-flex-direction:row-reverse;
-
-}
-
-.section img{
-
-width:280px;
-border-radius:15px;
-
-}
-
-.text{
-
-flex:1;
-min-width:260px;
-
-}
-
-h2{
-
-color:#f2a88d;
-margin-bottom:15px;
-
-}
-
-.badge{
-
-height:35px;
-margin:6px;
-
-}
+/* CONTACT */
 
 .contact{
-
-text-align:center;
-margin-top:40px;
-
+    text-align:center;
 }
 
-.btn{
-
-display:inline-block;
-padding:12px 30px;
-margin:10px;
-border-radius:40px;
-background:#f2a88d;
-color:white;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-
+button{
+    background:#323b4c;
+    color:white;
+    padding:12px 22px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
 }
 
-.btn:hover{
-
-transform:scale(1.1);
-
+button:hover{
+    opacity:0.9;
 }
 
-.footer{
-
-margin-top:70px;
-text-align:center;
-font-style:italic;
-color:#f2a88d;
-
-}
-
-@media(max-width:768px){
-
-.section{
-
-flex-direction:column;
-
-}
-
+footer{
+    text-align:center;
+    padding:30px;
+    font-size:14px;
+    background:#ffeae3;
 }
 
 </style>
@@ -222,185 +126,99 @@ flex-direction:column;
 <body>
 
 
-<nav>
-
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-<div class="header">
-
-<div class="avatar">
+<header>
 
 <img src="avt1.jpg">
 
-</div>
+<h1>Nguyen Anh</h1>
 
-</div>
+<p>Financial Analysis & Investment Student</p>
 
+<p><strong>Student ID:</strong> 2414330004</p>
 
+<p>Foreign Trade University - Hanoi</p>
 
-<div class="container">
-
-<h1 class="title">NGUYEN ANH</h1>
-
-<p class="subtitle">Financial Analysis & Investment Student</p>
+</header>
 
 
-<div id="about" class="section">
-
-<img src="avt2.png">
-
-<div class="text">
+<section class="about">
 
 <h2>About Me</h2>
 
 <p>
-Second-year Financial Analysis & Investment student at Foreign Trade University. 
-Passionate about financial markets, investment strategies and data-driven insights.
+Second-year Financial Analysis & Investment student at Foreign Trade University.
+Interested in financial markets, corporate finance and investment analysis.
+Currently building experience in marketing and business environments while
+developing strong analytical and communication skills.
 </p>
 
-<p>
-Interested in finance research, SQL data analysis and financial modelling.
-</p>
-
-</div>
-
-</div>
+</section>
 
 
-<div id="skills" class="section reverse">
-
-<img src="avt3.jpg">
-
-<div class="text">
+<section class="skills">
 
 <h2>Skills</h2>
 
-<img class="badge" src="https://img.shields.io/badge/SQL-orange?style=for-the-badge">
-
-<img class="badge" src="https://img.shields.io/badge/Excel-green?style=for-the-badge">
-
-<img class="badge" src="https://img.shields.io/badge/PowerPoint-red?style=for-the-badge">
-
-<img class="badge" src="https://img.shields.io/badge/IELTS-7.5-blue?style=for-the-badge">
-
-</div>
-
-</div>
-
-
-<div id="experience" class="section">
-
-<img src="avt4.jpg">
-
-<div class="text">
-
-<h2>Experience</h2>
-
-<p><b>Marketing Collaborator</b></p>
-
-<p>CamXu Education Center</p>
-
 <ul>
 
-<li>Created Facebook content for marketing campaigns</li>
-
-<li>Managed community engagement</li>
-
-<li>Collaborated with team to execute marketing strategies</li>
+<li>Financial Analysis</li>
+<li>Excel</li>
+<li>PowerPoint</li>
+<li>Google Sheets</li>
+<li>Content Marketing</li>
+<li>Market Research</li>
 
 </ul>
 
-</div>
-
-</div>
+</section>
 
 
-
-<div id="projects" class="section reverse">
-
-<img src="avt5.jpg">
-
-<div class="text">
+<section>
 
 <h2>Projects</h2>
 
-<p><b>Vietnam Coffee Market Research</b></p>
+<div class="projects">
 
-<p>Analysis of supply chain and export market trends.</p>
+<div class="project-card">
+<h3>Marketing Content Project</h3>
+<p>Created Facebook content and educational posts for CamXu Education.</p>
+</div>
 
-<br>
+<div class="project-card">
+<h3>Financial Research</h3>
+<p>Research on FDI impact on Vietnam economy (2016-2022).</p>
+</div>
 
-<p><b>SQL Financial Dataset Analysis</b></p>
-
-<p>Using SQL queries to analyze financial datasets.</p>
-
-<br>
-
-<p><b>Investment Strategy Research</b></p>
-
-<p>Research on long-term equity investment strategies.</p>
-
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Personal portfolio website built using HTML and GitHub Pages.</p>
 </div>
 
 </div>
 
+</section>
 
 
-<div id="contact" class="contact">
+<section class="contact">
 
 <h2>Contact</h2>
 
-<a href="https://facebook.com" class="btn">Facebook</a>
+<p>Email: anhalida@gmail.com</p>
 
-<a href="https://instagram.com" class="btn">Instagram</a>
+<p>Phone: 0907996561</p>
 
-<a href="https://github.com" class="btn">Github</a>
+<a href="cv.pdf" target="_blank">
+<button>Download CV</button>
+</a>
 
-<a href="cv.pdf" class="btn" download>Download CV</a>
-
-</div>
+</section>
 
 
-<div class="footer">
+<footer>
 
 <p>© 2026 Nguyen Anh Portfolio</p>
 
-</div>
-
-
-</div>
-
-
-
-<script>
-
-const sections=document.querySelectorAll(".section")
-
-window.addEventListener("scroll",()=>{
-
-sections.forEach(sec=>{
-
-const top=sec.getBoundingClientRect().top
-
-if(top<window.innerHeight-100){
-
-sec.classList.add("show")
-
-}
-
-})
-
-})
-
-</script>
-
+</footer>
 
 
 </body>

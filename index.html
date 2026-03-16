@@ -1,169 +1,407 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alida Nguyen Portfolio</title>
-    <style>
-        /* 1. THIẾT LẬP GIAO DIỆN HỒNG THANH LỊCH */
-        * { box-sizing: border-box; }
-        body {
-            margin: 0; padding: 0;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background-color: #fff5f7;
-            background-image: url('https://www.transparenttextures.com/patterns/floral-paper.png');
-            color: #444;
-            display: flex; flex-direction: column; align-items: center;
-            overflow-x: hidden;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        nav {
-            width: 100%; background: #ff99ac;
-            padding: 15px 0; position: sticky; top: 0; z-index: 1000;
-            display: flex; justify-content: center; gap: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        nav a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        nav a:hover { color: #ffe0e6; transform: scale(1.1); }
+<title>Nguyen Anh Portfolio</title>
 
-        .header-bg {
-            width: 100%; height: 300px;
-            background: linear-gradient(135deg, #ff99ac 0%, #ffcbd5 100%);
-            display: flex; justify-content: center; align-items: flex-end;
-            padding-bottom: 50px; position: relative;
-        }
+<style>
 
-        .avatar-frame {
-            width: 180px; height: 180px;
-            border-radius: 50% 20% 50% 20%;
-            border: 6px solid white; overflow: hidden;
-            box-shadow: 0 10px 25px rgba(255, 153, 172, 0.3);
-            background: white; transform: rotate(2deg); z-index: 10;
-        }
-        .avatar-frame img { width: 100%; height: 100%; object-fit: cover; }
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:'Segoe UI',sans-serif;
+}
 
-        /* 2. CONTAINER CHÍNH */
-        .container {
-            max-width: 950px; width: 92%;
-            margin-top: -30px; background: rgba(255, 255, 255, 0.98);
-            padding: 50px 35px; border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05); margin-bottom: 50px;
-        }
+body{
 
-        .welcome-title {
-            font-size: clamp(1.8em, 5vw, 2.6em); color: #ff5e78;
-            text-align: center; font-family: 'Georgia', serif; margin-bottom: 10px;
-        }
+background:#ffeae3;
+color:#323b4c;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
 
-        /* 3. SECTION BOXES */
-        .section-box {
-            display: flex; align-items: center; flex-wrap: wrap;
-            margin: 45px 0; gap: 35px; padding: 25px;
-            border-radius: 20px; background: #fff;
-            border: 2px dashed #ffcbd5; transition: 0.3s;
-        }
-        .section-box:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255,191,203,0.2); }
-        .section-box.reverse { flex-direction: row-reverse; }
+nav{
 
-        .section-img { width: 300px; max-width: 100%; border-radius: 15px; box-shadow: 8px 8px 0px #ffe5ea; }
-        .section-text { flex: 1; min-width: 280px; text-align: left; }
+width:100%;
+background:#323b4c;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+position:sticky;
+top:0;
+z-index:1000;
 
-        h2 { color: #ff5e78; font-size: 1.6em; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
-        
-        /* Song ngữ style */
-        .lang-en { font-style: italic; color: #777; font-size: 0.95em; margin-bottom: 8px; line-height: 1.6; }
-        .lang-vi { color: #444; font-weight: 500; line-height: 1.6; margin-bottom: 15px; }
+}
 
-        .badge { margin: 5px; height: 32px; border-radius: 5px; }
-        .contact-btn {
-            display: inline-block; padding: 12px 30px; margin: 10px;
-            border-radius: 50px; text-decoration: none; color: white;
-            font-weight: bold; background: #ff5e78; transition: 0.3s;
-        }
+nav a{
 
-        @media (max-width: 768px) {
-            .section-box, .section-box.reverse { flex-direction: column; text-align: center; }
-            .section-text { text-align: center; }
-        }
-    </style>
+color:#fdfdfd;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+
+}
+
+nav a:hover{
+
+color:#f2a88d;
+
+}
+
+.header{
+
+width:100%;
+height:260px;
+background:#f2a88d;
+display:flex;
+justify-content:center;
+align-items:flex-end;
+padding-bottom:40px;
+
+}
+
+.avatar{
+
+width:170px;
+height:170px;
+border-radius:50%;
+border:6px solid #fdfdfd;
+overflow:hidden;
+
+}
+
+.avatar img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+.container{
+
+max-width:950px;
+width:92%;
+background:#fdfdfd;
+margin-top:-40px;
+padding:40px;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
+
+}
+
+.title{
+
+text-align:center;
+font-size:2.2em;
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+text-align:center;
+color:#f2a88d;
+font-weight:bold;
+margin-bottom:30px;
+
+}
+
+.section{
+
+display:flex;
+gap:30px;
+margin:40px 0;
+align-items:center;
+flex-wrap:wrap;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+
+}
+
+.section.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+.section.reverse{
+
+flex-direction:row-reverse;
+
+}
+
+.section img{
+
+width:280px;
+border-radius:15px;
+
+}
+
+.text{
+
+flex:1;
+min-width:260px;
+
+}
+
+h2{
+
+color:#f2a88d;
+margin-bottom:15px;
+
+}
+
+.badge{
+
+height:35px;
+margin:6px;
+
+}
+
+.contact{
+
+text-align:center;
+margin-top:40px;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:12px 30px;
+margin:10px;
+border-radius:40px;
+background:#f2a88d;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.1);
+
+}
+
+.footer{
+
+margin-top:70px;
+text-align:center;
+font-style:italic;
+color:#f2a88d;
+
+}
+
+@media(max-width:768px){
+
+.section{
+
+flex-direction:column;
+
+}
+
+}
+
+</style>
+
 </head>
+
+
 <body>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experiences">Experiences</a>
-        <a href="#contact">Contact</a>
-    </nav>
 
-    <div class="header-bg">
-        <div class="avatar-frame">
-            <img src="https://media.giphy.com/media/2y98KScHKeaQM/giphy.gif" alt="Alida Nguyen">
-        </div>
-    </div>
+<nav>
 
-    <div class="container">
-        <h1 class="welcome-title">🌸 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓐𝓵𝓲𝓭𝓪'𝓼 𝓟𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸 🌸</h1>
-        <p style="text-align: center; color: #ff85a2; font-weight: bold;">Finance Student | FTU | Financial Market Researcher</p>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 
-        <hr style="border: 0; height: 1px; background: #ffcbd5; margin: 30px 0;">
+</nav>
 
-        <div id="about" class="section-box">
-            <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" class="section-img">
-            <div class="section-text">
-                <h2>About Me 🌿</h2>
-                <p class="lang-en">"A curious soul dedicated to unraveling the complexities of financial markets. I combine analytical rigor with a passion for continuous learning to drive meaningful insights in the world of investment."</p>
-                <p class="lang-vi">"Một tâm hồn khao khát khám phá những điều phức tạp của thị trường tài chính. Mình kết hợp sự nhạy bén trong phân tích cùng niềm đam mê học hỏi không ngừng để tạo ra những giá trị ý nghĩa trong thế giới đầu tư."</p>
-                
-                <p>🎀 <b>Họ tên:</b> Nguyễn Thị Phương Anh (Alida Nguyen)</p>
-                <p>🎀 <b>Ngày sinh:</b> 27/10/2006</p>
-                <p>🎀 <b>Vị trí:</b> Hà Nội, Việt Nam</p>
-                <p>🎀 <b>Sở thích:</b> Đọc sách, nghiên cứu đầu tư tài chính & dưỡng sinh</p>
-            </div>
-        </div>
 
-        <div id="skills" class="section-box reverse">
-            <img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" class="section-img">
-            <div class="section-text">
-                <h2>Knowledge & Skills 📊</h2>
-                <p class="lang-en">"Proficient in modern analytical tools to transform raw data into compelling financial stories. My goal is to bridge the gap between quantitative data and strategic investment decisions."</p>
-                <p class="lang-vi">"Thành thạo các công cụ phân tích hiện đại để biến dữ liệu thô thành những câu chuyện tài chính đầy sức thuyết phục. Mục tiêu của mình là kết nối dữ liệu định lượng với các quyết định đầu tư chiến lược."</p>
-                
-                <img class="badge" src="https://img.shields.io/badge/SQL-CC2927?style=for-the-badge&logo=postgresql&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/IELTS-7.5+-blue?style=for-the-badge">
-                <img class="badge" src="https://img.shields.io/badge/MOS-800+-success?style=for-the-badge">
-                <p style="font-size: 0.85em; color: #888; margin-top: 5px;">* MOS: 800+ Excel - Word - Powerpoint</p>
-            </div>
-        </div>
+<div class="header">
 
-        <div id="experiences" class="section-box">
-            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWl2ZHh6a3ppZmh3ZGNneTlhdmJlbDd1cW55ZnlqaWN2bm40N3V5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Zf12dIijlwhaDpjtsb/giphy.gif" class="section-img">
-            <div class="section-text">
-                <h2>Experiences 🏆</h2>
-                <p class="lang-en">"A journey marked by academic excellence, practical marketing contributions, and a strong foundation in community financial management."</p>
-                <p class="lang-vi">"Hành trình được ghi dấu bởi sự nỗ lực trong học thuật, những đóng góp thực tế trong Marketing và nền tảng vững chắc trong quản lý tài chính cộng đồng."</p>
-                
-                <p>🌸 <b>Top 6 IPCHALLENGE 2025:</b> Cuộc thi Sở hữu trí tuệ trực thuộc FTU</p>
-                <p>🌸 <b>Marketer:</b> 12+ tháng CTV Content Marketing trung tâm giáo dục</p>
-                <p>🌸 <b>Quản lý tài chính:</b> Quản lý 4 quỹ tài chính (quy mô 60+ thành viên/quỹ)</p>
-                <p>🌸 <b>Tutor:</b> Mentor đào tạo môn Toán & Tiếng Anh (học sinh 10-15 tuổi)</p>
-            </div>
-        </div>
+<div class="avatar">
 
-        <div id="contact" style="text-align: center; margin-top: 50px;">
-            <h2>Contact Me 💌</h2>
-            <a href="https://www.facebook.com/share/1bRAfWs2fH/?mibextid=wwXIfr" class="contact-btn" target="_blank">FACEBOOK</a>
-            <a href="https://www.instagram.com/_nguyeen.anh?igsh=MWxndHk3bDMxemJhMg%3D%3D&utm_source=qr" class="contact-btn" style="background: #E4405F;" target="_blank">INSTAGRAM</a>
-        </div>
+<img src="avt1.jpg">
 
-        <div style="text-align: center; margin-top: 80px; padding-bottom: 20px;">
-            <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 2.2em; color: #ff99ac; text-shadow: 1px 1px 3px rgba(0,0,0,0.05);">
-                🌸 𝓣𝓱𝓪𝓷𝓴𝓼 𝓯𝓸𝓻 𝓿𝓲𝓼𝓲𝓽𝓲𝓷𝓰 𝓶𝔂 𝔀𝓸𝓻𝓵𝓭 🌸
-            </p>
-            <img src="https://i.gifer.com/ZHsJ.gif" alt="Bye" style="width: 320px; max-width: 85%; border-radius: 15px;">
-            <p style="color: #ffcbd5; margin-top: 30px; font-size: 0.9em;"><i>© 2026 Alida Nguyen. Built with 💖 & Determination.</i></p>
-        </div>
-    </div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+<h1 class="title">NGUYEN ANH</h1>
+
+<p class="subtitle">Financial Analysis & Investment Student</p>
+
+
+<div id="about" class="section">
+
+<img src="avt2.png">
+
+<div class="text">
+
+<h2>About Me</h2>
+
+<p>
+Second-year Financial Analysis & Investment student at Foreign Trade University. 
+Passionate about financial markets, investment strategies and data-driven insights.
+</p>
+
+<p>
+Interested in finance research, SQL data analysis and financial modelling.
+</p>
+
+</div>
+
+</div>
+
+
+<div id="skills" class="section reverse">
+
+<img src="avt3.jpg">
+
+<div class="text">
+
+<h2>Skills</h2>
+
+<img class="badge" src="https://img.shields.io/badge/SQL-orange?style=for-the-badge">
+
+<img class="badge" src="https://img.shields.io/badge/Excel-green?style=for-the-badge">
+
+<img class="badge" src="https://img.shields.io/badge/PowerPoint-red?style=for-the-badge">
+
+<img class="badge" src="https://img.shields.io/badge/IELTS-7.5-blue?style=for-the-badge">
+
+</div>
+
+</div>
+
+
+<div id="experience" class="section">
+
+<img src="avt4.jpg">
+
+<div class="text">
+
+<h2>Experience</h2>
+
+<p><b>Marketing Collaborator</b></p>
+
+<p>CamXu Education Center</p>
+
+<ul>
+
+<li>Created Facebook content for marketing campaigns</li>
+
+<li>Managed community engagement</li>
+
+<li>Collaborated with team to execute marketing strategies</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+<div id="projects" class="section reverse">
+
+<img src="avt5.jpg">
+
+<div class="text">
+
+<h2>Projects</h2>
+
+<p><b>Vietnam Coffee Market Research</b></p>
+
+<p>Analysis of supply chain and export market trends.</p>
+
+<br>
+
+<p><b>SQL Financial Dataset Analysis</b></p>
+
+<p>Using SQL queries to analyze financial datasets.</p>
+
+<br>
+
+<p><b>Investment Strategy Research</b></p>
+
+<p>Research on long-term equity investment strategies.</p>
+
+</div>
+
+</div>
+
+
+
+<div id="contact" class="contact">
+
+<h2>Contact</h2>
+
+<a href="https://facebook.com" class="btn">Facebook</a>
+
+<a href="https://instagram.com" class="btn">Instagram</a>
+
+<a href="https://github.com" class="btn">Github</a>
+
+<a href="cv.pdf" class="btn" download>Download CV</a>
+
+</div>
+
+
+<div class="footer">
+
+<p>© 2026 Nguyen Anh Portfolio</p>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+const sections=document.querySelectorAll(".section")
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+
+const top=sec.getBoundingClientRect().top
+
+if(top<window.innerHeight-100){
+
+sec.classList.add("show")
+
+}
+
+})
+
+})
+
+</script>
+
+
+
 </body>
 </html>
